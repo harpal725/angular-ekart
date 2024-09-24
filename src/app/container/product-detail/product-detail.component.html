@@ -1,4 +1,4 @@
-<div class="ekart--product--details--info scroll">
+<div class="ekart--product--details--info scroll" [disableProduct]="true">
     <div class="ekart-product-detail-close">
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
@@ -53,8 +53,8 @@
             </div>                
         </div>
     </div>
-    <div class="ekart-product-detail-addtoCart">
-        <button class="btn-add-to-cart" *ngIf="product.isAvalible; else  notify">ADD TO CART</button>
+    <div class="ekart-product-detail-addtoCart" >
+        <button class="btn-add-to-cart" *ngIf="product.isAvalible; else  notify" appHover>ADD TO CART</button>
         <ng-template #notify>
             <button class="btn-add-to-cart">Notify Me</button>
         </ng-template>
